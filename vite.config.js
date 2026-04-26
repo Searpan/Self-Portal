@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Use relative asset paths so GitHub Pages project sites load JS/CSS correctly.
-  base: './',
+  // Use the repository base path on GitHub Pages.
+  base: process.env.GITHUB_ACTIONS ? '/Self-Portal/' : '/',
   plugins: [react()],
 })
