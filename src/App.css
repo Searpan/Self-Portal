@@ -50,8 +50,8 @@ h1 {
 }
 
 .avatar {
-  width: 128px;
-  height: 128px;
+  width: 178px;
+  height: 178px;
   border-radius: 24px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -175,6 +175,11 @@ h1 {
 }
 
 @media (max-width: 900px) {
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
   .content-grid {
     grid-template-columns: 1fr;
   }
@@ -182,5 +187,55 @@ h1 {
   .hero-card {
     grid-template-columns: 1fr;
     text-align: left;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-card,
+  .panel {
+    border-color: #334155;
+    box-shadow: 0 8px 28px rgba(2, 6, 23, 0.42);
+  }
+
+  .hero-card {
+    background: linear-gradient(140deg, #1f2f4f, #334e74);
+    color: #e7f0ff;
+  }
+
+  .contact-row span,
+  .contact-row a {
+    background: rgba(148, 163, 184, 0.22);
+    color: #e2ebff;
+  }
+
+  .panel {
+    background: #0f172a;
+    color: #cbd5e1;
+  }
+
+  .panel h2,
+  .experience-item h3,
+  .education-item h3 {
+    color: #e2e8f0;
+  }
+
+  .experience-item {
+    border-top-color: #263244;
+  }
+
+  .meta,
+  .education-item p {
+    color: #94a3b8;
+  }
+
+  .education-item {
+    border-color: #2d3b52;
+    background: #111c31;
+  }
+
+  .tag-list li {
+    border-color: #334155;
+    background: #17243a;
+    color: #dbeafe;
   }
 }
