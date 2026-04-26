@@ -106,8 +106,8 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="avatar" aria-hidden="true">
-          <span>LM</span>
+        <div className="avatar">
+          <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Louis Moya" />
         </div>
       </section>
 
