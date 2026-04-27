@@ -114,10 +114,7 @@ function App() {
           </h1>
           <p className="summary">{profile.summary}</p>
           <div className="hero-actions">
-            <a href="#experience" className="hero-btn primary">
-              Learn More
-            </a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hero-btn ghost">
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hero-btn primary">
               Hire Me
             </a>
           </div>
@@ -131,7 +128,7 @@ function App() {
           </div>
         </div>
         <div className="hero-visual">
-          <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Louis Moya" />
+          <img src={`${import.meta.env.BASE_URL}PNG.png`} alt="Louis Moya" />
         </div>
       </section>
 

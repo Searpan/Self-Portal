@@ -45,10 +45,17 @@
 .hero-card {
   position: relative;
   display: grid;
-  grid-template-columns: 1.15fr minmax(260px, 420px);
-  align-items: stretch;
-  gap: 20px;
-  padding: 34px 34px 18px;
+  grid-template-columns: 1fr minmax(360px, 560px);
+  align-items: center;
+  gap: 28px;
+  padding: 56px 52px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  min-height: 100vh;
   background: #f2f4f8;
   color: var(--color-text);
   overflow: hidden;
@@ -80,16 +87,16 @@
 .hero-copy {
   display: grid;
   align-content: center;
-  gap: 12px;
-  max-width: 520px;
-  padding-left: 34px;
+  gap: 14px;
+  max-width: 620px;
+  padding-left: 22px;
   position: relative;
   z-index: 2;
 }
 
 .eyebrow {
   margin: 0;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -99,9 +106,9 @@
 h1 {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-size: clamp(2.5rem, 4.6vw, 4.1rem);
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.06;
 }
 
 .role {
@@ -113,9 +120,9 @@ h1 {
 
 .summary {
   margin: 0;
-  max-width: 56ch;
-  line-height: 1.65;
-  font-size: 0.95rem;
+  max-width: 58ch;
+  line-height: 1.7;
+  font-size: 1.08rem;
   color: var(--color-text-soft);
 }
 
@@ -128,22 +135,16 @@ h1 {
 
 .hero-btn {
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: 600;
   border-radius: 4px;
-  padding: 10px 18px;
+  padding: 12px 22px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .hero-btn.primary {
   background: var(--color-accent);
   color: #ffffff;
-}
-
-.hero-btn.ghost {
-  background: #ffffff;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
 }
 
 .hero-btn:hover {
@@ -182,7 +183,7 @@ h1 {
   overflow: visible;
   border: none;
   background: transparent;
-  min-height: 360px;
+  min-height: 680px;
   position: relative;
   z-index: 2;
   display: flex;
@@ -196,7 +197,7 @@ h1 {
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
-  max-height: 460px;
+  max-height: 92vh;
 }
 
 .content-grid {
@@ -323,8 +324,9 @@ h1 {
 
   .hero-card {
     grid-template-columns: 1fr;
-    padding: 22px;
-    gap: 18px;
+    padding: 28px 22px;
+    gap: 20px;
+    min-height: 100vh;
   }
 
   .hero-card::after,
@@ -334,14 +336,15 @@ h1 {
 
   .hero-copy {
     padding-left: 0;
+    max-width: 100%;
   }
 
   .hero-visual {
-    min-height: 280px;
+    min-height: 420px;
   }
 
   .hero-visual img {
-    max-height: 360px;
+    max-height: 62vh;
   }
 
   .panel {
