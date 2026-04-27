@@ -48,6 +48,12 @@
 .hero-card {
   position: relative;
   overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
   background-size: cover;
   background-position: center 16%;
   color: #eef4ff;
@@ -111,19 +117,42 @@
   line-height: 0.92;
   text-transform: uppercase;
   color: rgba(233, 246, 236, 0.72);
+  transition: transform 0.45s ease, letter-spacing 0.45s ease, color 0.45s ease;
 }
 
 .hero-title span {
   display: block;
+  transition: transform 0.45s ease, text-align 0.45s ease;
 }
 
 .hero-title span:last-child {
   text-align: right;
+  transform: translateX(14%);
+}
+
+.hero-title span:first-child {
+  transform: translateX(-14%);
 }
 
 .hero-side-info {
   max-width: 540px;
   margin-left: auto;
+  transition: transform 0.45s ease;
+}
+
+.hero-card:hover .hero-title span:first-child,
+.hero-card:hover .hero-title span:last-child {
+  transform: translateX(0);
+  text-align: center;
+}
+
+.hero-card:hover .hero-title {
+  letter-spacing: -0.015em;
+  color: rgba(236, 249, 240, 0.86);
+}
+
+.hero-card:hover .hero-side-info {
+  transform: translateX(-28%);
 }
 
 .eyebrow {
@@ -306,10 +335,19 @@ h1 {
 
   .hero-title span:last-child {
     text-align: left;
+    transform: translateX(0);
+  }
+
+  .hero-title span:first-child {
+    transform: translateX(0);
   }
 
   .hero-side-info {
     margin-left: 0;
+  }
+
+  .hero-card:hover .hero-side-info {
+    transform: none;
   }
 
   .hero-top {
