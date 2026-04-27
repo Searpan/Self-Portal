@@ -104,11 +104,23 @@ function App() {
   return (
     <main className="site">
       <section className="hero-card" id="top">
+        <div className="hero-dot" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow">Personal Website</p>
-          <h1>{profile.name}</h1>
-          <p className="role">{profile.role}</p>
+          <p className="eyebrow">Get every single solution.</p>
+          <h1>
+            I'm {profile.role}
+            <br />
+            {profile.name}
+          </h1>
           <p className="summary">{profile.summary}</p>
+          <div className="hero-actions">
+            <a href="#experience" className="hero-btn primary">
+              Learn More
+            </a>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hero-btn ghost">
+              Hire Me
+            </a>
+          </div>
           <div className="contact-row" id="contact">
             <span>{profile.location}</span>
             <a href={`tel:${profile.phone.replace(/\s/g, '')}`}>{profile.phone}</a>
@@ -123,7 +135,7 @@ function App() {
         </div>
       </section>
 
-      <section className="content-grid">
+      <section className="content-grid" id="experience">
         <div className="panel">
           <h2>Experience</h2>
           {experience.map((job) => (
