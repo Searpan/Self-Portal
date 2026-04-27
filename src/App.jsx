@@ -5,7 +5,7 @@ function App() {
     name: 'LOUIS DENGYEL J. MOYA',
     role: 'Service Desk Engineer',
     location: 'Molino, Bacoor, Cavite',
-    phone: '+63 993 341 0893',
+    phone: '+63 993 344 0893',
     email: 'louismoya2@gmail.com',
     linkedin: 'https://www.linkedin.com/in/moyal02/',
     summary:
