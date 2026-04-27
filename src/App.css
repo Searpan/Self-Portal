@@ -161,6 +161,16 @@ h1 {
   font-weight: 500;
 }
 
+.skills-groups {
+  margin: 0 0 18px;
+}
+
+.skill-line {
+  margin: 0 0 10px;
+  line-height: 1.45;
+  color: #1f2937;
+}
+
 .education-grid {
   display: grid;
   gap: 14px;
@@ -246,6 +256,10 @@ h1 {
     border-color: #334155;
     background: #17243a;
     color: #dbeafe;
+  }
+
+  .skill-line {
+    color: #cbd5e1;
   }
 
   .site :is(h1, h2, h3, p, li, span, a):hover {

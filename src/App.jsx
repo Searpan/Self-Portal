@@ -19,10 +19,11 @@ function App() {
       period: 'Sep 2025 - Jan 2026',
       location: 'BGC',
       highlights: [
-        'Administered enterprise IT tools including Office 365, Active Directory, Azure AD, Exchange Admin, and SharePoint.',
-        'Managed user lifecycle processes such as onboarding, offboarding, account modifications, and GPO/security group operations.',
-        'Supported workflows with RMM tools including ServiceNow, ConnectWise Manage, Automate, Service Manager, and BitLocker recovery.',
-        'Enforced security protocols including Google/Microsoft/Okta MFA, VPN, and firewall management.',
+        'Administered Office 365 and Entra ID for 500+ users, maintaining 99.9% uptime and full compliance with security policies.',
+        'Managed end-to-end user lifecycle using PowerShell scripting to automate onboarding/offboarding for 500+ users, improving efficiency by 90%.',
+        'Handled ServiceNow, ConnectWise Manage, Automate, and Service Manager tickets, ensuring timely resolution of high-priority incidents.',
+        'Resolved Level 1-2 issues across Windows 10/11, Microsoft 365, networking, and BitLocker, minimizing user downtime.',
+        'Led rollout of Multi-Factor Authentication (MFA) across the organization, reducing unauthorized access incidents by 40% within one quarter.',
       ],
     },
     {
@@ -31,9 +32,10 @@ function App() {
       period: 'Jan 2022 - Sep 2025',
       location: 'Quezon City',
       highlights: [
-        'Resolved customer IT issues through online ticketing and prompt email responses.',
-        'Escalated complex incidents with clear and detailed technical reports.',
-        'Maintained high service standards by addressing client concerns quickly and professionally.',
+        'Resolved an average of 60+ technical tickets per week while maintaining a 98% customer satisfaction rating.',
+        'Diagnosed and escalated complex infrastructure issues, improving resolution time for high-priority incidents.',
+        'Delivered consistent client support by maintaining clear communication and rapid response times, strengthening client relationships.',
+        'Maintained SLA compliance by prioritizing critical incidents and ensuring timely ticket closure.',
       ],
     },
     {
@@ -75,16 +77,26 @@ function App() {
   ]
 
   const skills = [
-    'Customer Service',
-    'Active Directory',
-    'Office 365 Admin Center',
-    'Hardware/Software Troubleshooting',
-    'Video Editing',
-    'PC Building',
-    'English Proficient',
-    'Email Filtering',
-    'Firewall',
-    'RMM (Remote Monitoring and Management)',
+    {
+      category: 'Cloud & Identity',
+      items: 'Microsoft 365, Entra ID (Azure AD), Exchange Online, MFA, Access Control',
+    },
+    {
+      category: 'Systems Administration',
+      items: 'Active Directory (GPO, User Management), Windows 10/11, BitLocker',
+    },
+    {
+      category: 'Networking & Security',
+      items: 'TCP/IP, DNS, Network Troubleshooting, Firewall Basics, Email Security',
+    },
+    {
+      category: 'ITSM & Tools',
+      items: 'ServiceNow, ConnectWise Manage, ConnectWise Automate, RMM Tools',
+    },
+    {
+      category: 'Support Operations',
+      items: 'Incident Management, SLA Compliance, End-User Support (L1-L2)',
+    },
   ]
 
   const interests = ['Gaming', 'AI', 'Arduino', 'Technology', 'Tabletop Games']
@@ -135,11 +147,13 @@ function App() {
 
         <div className="panel side">
           <h2>Skills</h2>
-          <ul className="tag-list">
+          <div className="skills-groups">
             {skills.map((skill) => (
-              <li key={skill}>{skill}</li>
+              <p key={skill.category} className="skill-line">
+                <strong>{skill.category}:</strong> {skill.items}
+              </p>
             ))}
-          </ul>
+          </div>
 
           <h2>Interests</h2>
           <ul className="tag-list">
