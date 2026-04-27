@@ -100,26 +100,48 @@ function App() {
   ]
 
   const interests = ['Gaming', 'AI', 'Arduino', 'Technology', 'Tabletop Games']
+  const [heroFirstName, ...heroRestName] = profile.name.split(' ')
+  const heroLastName = heroRestName.join(' ')
+  const heroTabs = ['About me', 'Track record', 'Expertise', 'Experience']
 
   return (
     <main className="site">
-      <section className="hero-card">
-        <div>
-          <p className="eyebrow">Personal Website</p>
-          <h1>{profile.name}</h1>
-          <p className="role">{profile.role}</p>
-          <p className="summary">{profile.summary}</p>
-          <div className="contact-row">
-            <span>{profile.location}</span>
-            <a href={`tel:${profile.phone.replace(/\s/g, '')}`}>{profile.phone}</a>
-            <a href={`mailto:${profile.email}`}>{profile.email}</a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
+      <section
+        className="hero-card"
+        style={{
+          backgroundImage: `linear-gradient(108deg, rgba(3, 7, 18, 0.84) 0%, rgba(11, 31, 68, 0.62) 54%, rgba(3, 7, 18, 0.9) 100%), url('${import.meta.env.BASE_URL}profile.png')`,
+        }}
+      >
+        <div className="hero-top">
+          <div className="hero-pills">
+            {heroTabs.map((tab) => (
+              <span key={tab}>{tab}</span>
+            ))}
           </div>
+          <a href="#contact" className="hero-contact-btn">
+            Contact
+          </a>
         </div>
-        <div className="avatar">
-          <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Louis Moya" />
+
+        <div className="hero-main">
+          <div className="hero-title-wrap">
+            <h1 className="hero-title">
+              <span>{heroFirstName}</span>
+              <span>{heroLastName}</span>
+            </h1>
+          </div>
+          <div className="hero-side-info">
+            <p className="role">{profile.role}</p>
+            <p className="summary">{profile.summary}</p>
+            <div className="contact-row" id="contact">
+              <span>{profile.location}</span>
+              <a href={`tel:${profile.phone.replace(/\s/g, '')}`}>{profile.phone}</a>
+              <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
