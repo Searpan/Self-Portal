@@ -26,6 +26,14 @@
   line-height: 1.6;
 }
 
+.site :is(h1, h2, h3, p, li, span, a) {
+  transition: color 0.2s ease;
+}
+
+.site :is(h1, h2, h3, p, li, span, a):hover {
+  color: var(--color-accent);
+}
+
 .hero-card,
 .panel {
   background: var(--color-bg-alt);
